@@ -22,7 +22,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/daytonaio/go-devcontainer
-        sep-tags: ","
+          sep-tags: ","
       # Working around devcontainer action not supporting the metadata format
       # https://github.com/devcontainers/ci/issues/235
       - name: Update Tags to Fit into devcontainers/cli format
