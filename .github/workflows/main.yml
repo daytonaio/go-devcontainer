@@ -30,4 +30,4 @@ jobs:
         with:
           imageName: ghcr.io/daytonaio/go-devcontainer
           platform: linux/amd64,linux/arm64
-          imageTag: main
+          imageTag: main,latest
