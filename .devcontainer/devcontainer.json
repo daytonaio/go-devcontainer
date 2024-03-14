@@ -13,9 +13,9 @@
 			"installOhMyZsh": true,
 			"installOhMyZshConfig": true,
 			"upgradePackages": false,
-			"username": "daytona",
-			"userUid": "1000",
-			"userGid": "1000"
+			"username": "automatic", // We create the daytona user in the Dockerfile
+			"userUid": "automatic",  // So let common-utils detect the user
+			"userGid": "automatic"   // setting the user here will cause issues
 		},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"installDockerBuildx": true,
@@ -35,5 +35,4 @@
 			"version": "latest"
 		}
 	}
-
 }
