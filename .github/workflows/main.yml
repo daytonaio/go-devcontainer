@@ -29,5 +29,6 @@ jobs:
           BUILDX_NO_DEFAULT_ATTESTATIONS: true
         with:
           imageName: ghcr.io/daytonaio/go-devcontainer
+          cacheFrom: ghcr.io/daytonaio/go-devcontainer
           platform: linux/amd64,linux/arm64
           imageTag: main,latest
