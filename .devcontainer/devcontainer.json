@@ -24,7 +24,8 @@
 			"dockerDashComposeVersion": "latest"
 		},
 		"ghcr.io/devcontainers/features/go:1": {
-			"version": "1.22.1"
+			"version": "1.22.1",
+			"golangciLintVersion": "1.57.1"
 		},
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
