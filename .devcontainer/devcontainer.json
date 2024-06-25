@@ -37,7 +37,7 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/bash-command:1": {
 			// Cache go modules for a faster post create command
-			"command": "git clone https://github.com/daytonaio/daytona && cd daytona && go mod tidy && cd .. && rm -rf daytona"
+			"command": "git clone https://github.com/daytonaio/daytona && cd daytona && go mod tidy && cd .. && rm -rf daytona && go install github.com/swaggo/swag/cmd/swag@v1.16.3 && chown -R daytona:golang /usr/local/go && chown -R daytona:golang /go"
 		}
 	},
 	"overrideFeatureInstallOrder": [
