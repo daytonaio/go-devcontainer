@@ -14,8 +14,8 @@
 			"installOhMyZshConfig": true,
 			"upgradePackages": false,
 			"username": "automatic", // We create the daytona user in the Dockerfile
-			"userUid": "automatic",  // So let common-utils detect the user
-			"userGid": "automatic"   // setting the user here will cause issues
+			"userUid": "automatic", // So let common-utils detect the user
+			"userGid": "automatic" // setting the user here will cause issues
 		},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"installDockerBuildx": true,
@@ -34,6 +34,18 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/devcontainers-cli:1": {
 			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/bash-command:1": {
+			// Cache go modules for a faster post create command
+			"command": "git clone https://github.com/daytonaio/daytona && cd daytona && go mod tidy && cd .. && rm -rf daytona"
 		}
-	}
+	},
+	"overrideFeatureInstallOrder": [
+		"ghcr.io/devcontainers/features/common-utils:2",
+		"ghcr.io/devcontainers/features/docker-in-docker:2",
+		"ghcr.io/devcontainers/features/go:1",
+		"ghcr.io/devcontainers/features/node:1",
+		"ghcr.io/devcontainers-contrib/features/devcontainers-cli:1",
+		"ghcr.io/devcontainers-contrib/features/bash-command:1"
+	]
 }
