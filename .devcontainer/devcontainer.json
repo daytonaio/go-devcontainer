@@ -25,7 +25,7 @@
 		},
 		"ghcr.io/devcontainers/features/go:1": {
 			"version": "1.23",
-			"golangciLintVersion": "1.60.1"
+			"golangciLintVersion": "1.63.4"
 		},
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
